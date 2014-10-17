@@ -1,12 +1,16 @@
 {
-	"name": "hookpoints",
-	"version": "0.0.1",
-	"description": "Simple hook system",
-	"author": "Emil Kantis <e.kantis@gmail.com>",
-	"main": "hookpoints.js",
-	"dependencies": {
-		"mean": "*"
-	},
-	"preferGlobal": false,
-	"private": true
+  "name": "hookpoints",
+  "version": "0.0.1",
+  "description": "Simple hook system",
+  "author": "Emil Kantis <e.kantis@gmail.com>",
+  "main": "hookpoints.js",
+  "dependencies": {
+    "mean": "*"
+  },
+  "preferGlobal": false,
+  "private": false,
+  "devDependencies": {
+    "chai": "^1.9.2",
+    "mocha": "^1.21.5"
+  }
 }
