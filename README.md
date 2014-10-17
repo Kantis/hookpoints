@@ -26,3 +26,4 @@ Small utility library for creating, subscribing to, and triggering hook points.
 ## Release History
 
 * 0.1.0 Initial release
+* 0.1.1 Removed unnecessary dependency to MEAN.io
