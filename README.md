@@ -4,7 +4,7 @@ Hookpoints
 Small utility library for creating, subscribing to, and triggering hook points.
 
 ## Installation
-	npm install hookpoitns
+	npm install hookpoints
 
 ## Usage
 	var helloWorld = function() {
