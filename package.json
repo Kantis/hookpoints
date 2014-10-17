@@ -1,9 +1,9 @@
 {
-	"name": "meanhooks",
+	"name": "hookpoints",
 	"version": "0.0.1",
-	"description": "Adds hooks to MEAN.IO",
+	"description": "Simple hook system",
 	"author": "Emil Kantis <e.kantis@gmail.com>",
-	"main": "meanhooks.js",
+	"main": "hookpoints.js",
 	"dependencies": {
 		"mean": "*"
 	},
