@@ -4,9 +4,6 @@
   "description": "Simple hook system",
   "author": "Emil Kantis <e.kantis@gmail.com>",
   "main": "hookpoints.js",
-  "dependencies": {
-    "mean": "*"
-  },
   "preferGlobal": false,
   "private": false,
   "devDependencies": {
