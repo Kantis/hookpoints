@@ -1,0 +1,12 @@
+{
+	"name": "meanhooks",
+	"version": "0.0.1",
+	"description": "Adds hooks to MEAN.IO",
+	"author": "Emil Kantis <e.kantis@gmail.com>",
+	"main": "meanhooks.js",
+	"dependencies": {
+		"mean": "*"
+	},
+	"preferGlobal": false,
+	"private": true
+}
