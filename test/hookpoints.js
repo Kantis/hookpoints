@@ -1,10 +1,10 @@
 var assert = require('chai').assert,
 hookpoints = require('../hookpoints'),
-registerHookPoint = hookpoints.registerHookPoint,
-registerHookListener = hookpoints.registerHookListener,
-triggerHookPoint = hookpoints.triggerHookPoint;
+register = hookpoints.register,
+subscribe = hookpoints.subscribe,
+trigger = hookpoints.trigger;
 
-describe('#triggerHookPoint', function() {
+describe('#trigger', function() {
 	it('Triggers a hook point properly', function() {
 		var myVar = 0;
 
@@ -12,9 +12,9 @@ describe('#triggerHookPoint', function() {
 			myVar++;
 		}
 
-		registerHookPoint("testPoint");
-		registerHookListener("testPoint", incrementMyVar);
-		triggerHookPoint("testPoint");
+		register("testPoint");
+		subscribe("testPoint", incrementMyVar);
+		trigger("testPoint");
 
 		assert.equal(myVar, 1);
 	});
@@ -26,11 +26,11 @@ describe('#triggerHookPoint', function() {
 			myVar++;
 		}
 
-		registerHookPoint("testPoint");
-		registerHookListener("testPoint", incrementMyVar);
+		register("testPoint");
+		subscribe("testPoint", incrementMyVar);
 
 		for (var i = 10000; i > 0; i--) {
-			triggerHookPoint("testPoint");
+			trigger("testPoint");
 		};
 
 		assert.equal(myVar, 10000);
@@ -43,9 +43,9 @@ describe('#triggerHookPoint', function() {
 			myVar += params.amount;
 		}
 
-		registerHookPoint("testPoint");
-		registerHookListener("testPoint", incrementMyVar);
-		triggerHookPoint("testPoint", {amount: 100});
+		register("testPoint");
+		subscribe("testPoint", incrementMyVar);
+		trigger("testPoint", {amount: 100});
 
 		assert.equal(myVar, 100);
 

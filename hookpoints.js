@@ -1,32 +1,32 @@
 var registeredHooks = [];
 
-exports.registerHookPoint = function(hookName) {
+exports.register = function(hookName) {
 	if (registeredHooks.indexOf(hookName) > -1) {
 		throw "Hook point already exists!";
 	}
 
 	var hook = {};
 	hook.name = hookName;
-	hook.listeners = [];
+	hook.subscribers = [];
 	registeredHooks[hookName] = hook;
 }
 
-exports.triggerHookPoint = function(hookName, params) {
+exports.trigger = function(hookName, params) {
 	if (registeredHooks[hookName] === undefined) {
 		throw "Hook point does not exist!";
 	}
 
-	var listeners = registeredHooks[hookName].listeners;
+	var subscribers = registeredHooks[hookName].subscribers;
 
-	for (var i = listeners.length - 1; i >= 0; i--) {
-		listeners[i](params);
+	for (var i = subscribers.length - 1; i >= 0; i--) {
+		subscribers[i](params);
 	};
 }
 
-exports.registerHookListener = function(hookName, callback) {
+exports.subscribe = function(hookName, callback) {
 	if (registeredHooks[hookName] === undefined) {
 		throw "Hook point does not exist!";
 	}
 
-	registeredHooks[hookName].listeners.push(callback);
+	registeredHooks[hookName].subscribers.push(callback);
 }
